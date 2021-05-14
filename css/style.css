@@ -1,6 +1,4 @@
 
-/* CSS for All */
-
 html{
     height:100%;
     background: radial-gradient(circle,#fff,#ccc);   
@@ -47,7 +45,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: #535aa8;
+    color: #EA10B8;
 }
 
 .btn{
@@ -97,7 +95,6 @@ fieldset{
     color: green;
 }
 
-/* CSSS for navbar section */
 
 .logo{
     width: 10%;
@@ -117,7 +114,7 @@ fieldset{
 }
 
 
-/* CSS for Food Search Section */
+
 
 .food-search{
     background-image: url(../images/bg_foodsearch.jpg);
@@ -183,7 +180,7 @@ fieldset{
 }
 
 
-/* CSS for Social */
+
 .social ul{
     list-style-type: none;
 }
@@ -192,7 +189,7 @@ fieldset{
     padding: 1%;
 }
 
-/* for Order Section */
+
 .order{
     width: 50%;
     margin: 0 auto;

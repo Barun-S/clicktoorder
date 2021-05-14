@@ -1,8 +1,8 @@
 
-<?php include('partials-front/menu.php'); ?>
+<?php include('front-parts/menu.php'); ?>
 
     <?php 
-        //CHeck whether food id is set or not
+        //Check whether food id is set or not
         if(isset($_GET['food_id']))
         {
             //Get the Food id and details of the selected food
@@ -17,7 +17,7 @@
             //Count the rows
             
             $count = mysqli_num_rows($res);
-            //CHeck whether the data is available or not
+            //Check whether the data is available or not
             
             if($count == 1)
             {
@@ -78,7 +78,7 @@
                         <h3><?php echo $title; ?></h3>
                         <input type="hidden" name="food" value="<?php echo $title; ?>">
 
-                        <p class="food-price">$<?php echo $price; ?></p>
+                        <p class="food-price">Rs.<?php echo $price; ?></p>
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
@@ -154,7 +154,9 @@
                     if($res2==true)
                     {
                         //Query Executed and Order Saved
-                        $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
+                        $_SESSION['order'] = "<div class='success text-center'>Congrats! Your Food Item is Ordered Successfully :) 
+                        <br> You can Pay either using Card or Cash.
+                        </div>";
                         header('location:'.SITEURL);
                     }
                     else
@@ -172,4 +174,4 @@
     </section>
     <!-- Food Search Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('front-parts/footer.php'); ?>

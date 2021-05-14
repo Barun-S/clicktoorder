@@ -1,5 +1,5 @@
 
-<?php include('partials-front/menu.php'); ?>
+<?php include('front-parts/menu.php'); ?>
 
 
     <!-- Categories Section Starts Here -->
@@ -70,4 +70,4 @@
     <!-- Categories Section Ends Here -->
 
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('front-parts/footer.php'); ?>

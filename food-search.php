@@ -1,5 +1,5 @@
 <link rel='stylesheet' type='text/css' href='css/style.php' />
-    <?php include('partials-front/menu.php'); ?>
+    <?php include('front-parts/menu.php'); ?>
 
     <!-- Food Search Section Starts Here -->
     <section class="food-search text-center" >
@@ -105,4 +105,4 @@
     </section>
     <!-- Food Menu Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('front-parts/footer.php'); ?>

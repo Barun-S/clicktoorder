@@ -1,66 +1,30 @@
+Introduction: click to order - online food ordering system is an omline platform that allows users to order food over the web.
 
-# ⚙️ Technology Used
-1. HTML5
-2. CSS3
-3. Core/Procedural PHP programming language
-4. MySQL Relational Database
+Functionalities:
+ 
+ User: 
+ 1. User can search and select food from categories.
+ 2. User can order selected food using Email, Phone number, Address.
+ 
+ Admin:
+ 1. Admin can change the categories and food items under the categories.
+ 2. Admin can add/delete food items.
+ 3. Admin can update the current status of food. 
+ 4. New admin can be registered using Username and Password.
+ 5. Admin can update their password.
 
 
-# 🧰 Features
-1. Visitors/Users can browse all the Categories and Food Items. 
-2. They also can order easily from the website.
-3. Admin can Manage Admin, Caegories and Food Items
-4. Admin can also Manage and Track Food Order and Delivery
+Languages Used: 
+HTML
+CSS
+PHP
+MYSQL
 
+How to Run the Project:
+1. Download and install xampp.
+2. Copy the project folder into xampp->htdocs folder.
+3. Create database on pyphpadmin using MYSQL database.
+4. Open browser and search http://localhost/clicktoorder to run the website.
 
-
-
-## 📖  How to Download the Project and Run on your PC?
-
-### Pre-Requisites:
-
-1. Download and Install XAMPP
-
-[Click Here to Download](https://www.apachefriends.org/index.html)
-
-2. Install any Text Editor (Sublime Text or Visual Studio Code or Atom or Brackets)
-
-### Installation
-
-1. Download as as Zip or Clone this project
-2. Move this project to Root Directory
-```
-Local Disc C: -> xampp -> htdocs -> 'this project'
-```
-*Local Disk C is the location where xampp was installed*
-
-3. Open XAMPP Control Panel and Start 'Apache' and 'MySQL'
-
-4. Import Database
-
-a. Open 'phpmyadmin' in your browser
-b. Create a Database
-c. Import the SQL file provided with this project
-
-5. Make Changes to settings
-
-Go to 'config' folder and Open 'constants.php' file. Then make changes on following constants
-```php
-<?php 
-//Start Session
-session_start();
-
-//Create Constants to Store Non Repeating Values
-define('SITEURL', 'http://localhost/food-order/'); //Update the home URL of the project if you have changed port number or it's live on server
-define('LOCALHOST', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'food-order');
-    
-$conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database Connection
-$db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error()); //SElecting Database 
-
-?>
-```
-
-6. Now, Open the project in your browser. It should run perfectly.
+Developers:
+The project is developed by Barun (B19CSE020) and Kshitiz (B19CSE111).

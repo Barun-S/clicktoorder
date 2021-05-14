@@ -1,7 +1,7 @@
 
 html{
     height:100%;
-    background: radial-gradient(circle,#fff,#ccc);   
+    background: radial-gradient(circle, #fff, #ccc);   
 }
 
 *{
@@ -28,21 +28,25 @@ html{
 .tbl-full{
     width: 100%;
 }
+
 .tbl-30{
     width: 30%;
 }
 
 table tr th{
+    border-radius: 6px;
     border-bottom: 1px solid black;
     padding: 1%;
     text-align: left;
 }
 
 table tr td{
+    border-radius: 6px;
     padding: 1%;
 }
 
 .btn-primary{
+    border-radius: 6px;
     background-color: #1e90ff;
     padding: 1%;
     color: white;
@@ -50,10 +54,12 @@ table tr td{
     font-weight: bold;
 }
 .btn-primary:hover{
+    border-radius: 6px;
     background-color: #3742fa;
 }
 
 .btn-secondary{
+    border-radius: 6px;
     background-color: #7bed9f;
     padding: 1%;
     color: black;
@@ -61,10 +67,12 @@ table tr td{
     font-weight: bold;
 }
 .btn-secondary:hover{
+    border-radius: 6px;
     background-color: #2ed573;
 }
 
 .btn-danger{
+    border-radius: 6px;
     background-color: #ff6b81;
     padding: 1%;
     color: white;
@@ -72,35 +80,41 @@ table tr td{
     font-weight: bold;
 }
 .btn-danger:hover{
+    border-radius: 6px;
     background-color: red;
 }
 
 .success{
+    border-radius: 6px;
     color: #2ed573;
 }
 .error{
+    border-radius: 6px;
     color: #ff4757;
 }
 
 
 /* CSS for Menu */
 .menu{
+    border-radius: 6px;
     border-bottom: 1px solid grey;
 }
 .menu ul{
+    
     list-style-type: none;
 }
 .menu ul li{
+    
     display: inline;
-    padding: 1%;
+    padding: 4%;
 }
 .menu ul li a{
     text-decoration: none;
     font-weight: bold;
-    color: #F333333;
+    color: #0F23F5;
 }
 .menu ul li a:hover{
-    color: darkgreen;
+    color: #EA10B8;
 }
 
 /* CSS for main-content */
@@ -110,6 +124,7 @@ table tr td{
 }
 
 .col-4{
+    border-radius: 14px;
     width: 18%;
     background-color: white;
     margin: 1%;

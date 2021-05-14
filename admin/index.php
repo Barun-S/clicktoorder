@@ -4,7 +4,7 @@
         <!-- Main Content Section Starts -->
         <div class="main-content">
             <div class="wrapper">
-                <h1>Dashboard</h1>
+                <h1><u>Dashboard</u></h1>
                 <br><br>
                 <?php 
                     if(isset($_SESSION['login']))

@@ -1,8 +1,11 @@
-    <?php include('partials-front/menu.php'); ?>
+    <?php include('front-parts/menu.php'); ?>
 
-    <!-- Search for food -->
+    <!-- Food search section containing search text box and search button -->
+
     <section class="food-search text-center">
         <div class="container">
+            
+<!--       form for searching food-->
             
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Your Favourite Food..." required>
@@ -11,7 +14,7 @@
 
         </div>
     </section>
-    <!-- Food Search Section Ends Here -->
+    <!-- Food Search Section End -->
 
     <?php 
         if(isset($_SESSION['order']))
@@ -21,23 +24,28 @@
         }
     ?>
 
-    <!-- Categories Section Starts Here -->
+    <!-- Food Categories Section -->
+
     <section class="categories">
         <div class="container">
-            <h2 class="text-center">Eat What Makes You Happy!!</h2>
+            <h2 class="text-center"> Eat What Makes You Happy!! </h2>
 
             <?php 
-                //Create SQL Query to Display CAtegories from Database
+            
+                // Create SQL Query to Display Categories from Database
+                
                 $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
+                
                 //Execute the Query
                 $res = mysqli_query($conn, $sql);
-                //Count rows to check whether the category is available or not
+                
+                //Count rows to check if the category is available 
                 $count = mysqli_num_rows($res);
 
-                if($count>0)
+                if($count > 0)
                 {
                     //Categories Available
-                    while($row=mysqli_fetch_assoc($res))
+                    while($row = mysqli_fetch_assoc($res))
                     {
                         //Get the Values like id, title, image_name
                         $id = $row['id'];
@@ -48,17 +56,17 @@
                         <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php 
-                                    //Check whether Image is available or not
-                                    if($image_name=="")
+                                    //Check if Image is available
+                                    if($image_name == "")
                                     {
-                                        //Display MEssage
+                                        //If image is not available the display the message Image not available
                                         echo "<div class='error'>Image not Available</div>";
                                     }
                                     else
                                     {
-                                        //Image Available
+                                        //If image is available then display the image
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Image Unavailable" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
@@ -73,8 +81,8 @@
                 }
                 else
                 {
-                    //Categories not Available
-                    echo "<div class='error'>Category not Added.</div>";
+                    //If Category is not in Database then display category not found
+                    echo "<div class='error'>Category not Found.</div>";
                 }
             ?>
 
@@ -83,17 +91,18 @@
         </div>
     </section>
 
-    <!-- Categories Section Ends Here -->
+    <!-- Categories Section End -->
 
-    <!-- Food Menu Section Starts Here -->
+    <!-- Food Menu Section Start -->
+
     <section class="food-menu">
         <div class="container">
             <h2 class="text-center">Food Menu</h2>
 
             <?php 
             
-            //Getting Foods from Database that are active and featured
-            //SQL Query
+            //Getting Foods from Database 
+            //Create SQL Query
             $sql2 = "SELECT * FROM tbl_food WHERE active='Yes' AND featured='Yes' LIMIT 6";
 
             //Execute the Query
@@ -102,7 +111,7 @@
             //Count Rows
             $count2 = mysqli_num_rows($res2);
 
-            //CHeck whether food available or not
+            //Check whether food available or not
             if($count2>0)
             {
                 //Food Available
@@ -129,7 +138,7 @@
                                 {
                                     //Image Available
                                     ?>
-                                    <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                    <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Image Unavailable" class="img-responsive img-curve">
                                     <?php
                                 }
                             ?>
@@ -168,7 +177,7 @@
         </p>
     </section>
 
-    <!-- Food Menu Section Ends Here -->
+    <!-- Food Menu Section End -->
 
     
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('front-parts/footer.php'); ?>
